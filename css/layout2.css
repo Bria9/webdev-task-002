@@ -1,0 +1,71 @@
+@import url("reset.css");
+
+body {
+  padding: 2rem;
+}
+
+.grid-container {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 2fr 2fr;
+  grid-template-areas:
+    "header header header"
+    "aside section section"
+    "footer footer footer";
+}
+
+.area {
+  padding: 2rem;
+  text-align: center;
+  color: #ffff;
+  border-radius: 0.4rem;
+  font-size: 25px;
+}
+
+.header {
+  grid-area: header;
+  background-color: #9f2064;
+}
+.aside {
+  grid-area: aside;
+  background-color: #106396;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section {
+  grid-area: section;
+  background-color: #25b67b;
+  padding-top: 2rem;
+}
+.article {
+  background-color: #e4185b;
+  padding: 1.5rem;
+  margin: 1rem;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #e06b26;
+}
+
+@media only screen and (max-width: 800px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr; 
+    grid-template-areas:
+      "header header header"
+      "section section section"
+      "aside aside aside"
+      "footer footer footer";
+    gap: 1rem;
+  }
+
+  .area {
+    padding: 20px;
+    text-align: center;
+    color: #ffff;
+    border-radius: 0.4rem;
+    font-size: 25px;
+  }
+}
